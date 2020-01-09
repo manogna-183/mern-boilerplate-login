@@ -1,0 +1,32 @@
+{
+  "name": "mern-boilerplate-login",
+  "version": "1.0.0",
+  "description": "MERN boiler plate code for login and register",
+  "main": "index.js",
+  "engine": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "backend": "nodemon server/server.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "Manogna Namburi",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "concurrently": "^5.0.2",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.5"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^0.20.0",
+    "nodemon": "^2.0.2"
+  }
+}
